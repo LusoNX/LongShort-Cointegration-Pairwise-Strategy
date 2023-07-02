@@ -9,15 +9,17 @@
 Ensure you have installed the necessary dependencies. 
 You must populate the AssetIndex in the database, so it can import the price data.
 
+# Motivation
+
 # The Strategy 
 The strategy seeks to profit from the mean conversion of two cointegrated stocks. Cointegration is chosen because it reflects the long-term co-movement among two series, as opposed to the correlation, which is more short term oriented. The rationale (assumption) is that if two stocks are cointegrated over time, it suggests that their fundamental characteristics are similar and such similarities are embedded through the price action of the market participants. To further enhance the rationale, pairs are considered only within their industry/sector group. 
 Thus, if they tend to co-move over time, any short-term deviations from their common central tendency (explained below) can be exploited. Of course, even if two stocks share similarities and co-move over time, discrepancies may arise from idiosyncrasies in their businesses. That is, common specific factors that marginally affects, either positively or negatively, on company relative to its peer.
 To partially cope with this issue, the strategy should be employed on a vast diversified investment universe. Furthermore, the strategy alleviates part of this unsystematic risk, by segregating winners from losers, based on their price momentum, relatively to other industry/sector peers. The rationale (again assumption) is the same as above, since market participants are expected to embed any positive(negative) news flows into stock prices, the labelling allows us the strategy to safeguard itself in catching falling knifes (buying losers) or from selling stars (selling winners).
 
-#Note on Momentum 
+## Note on Momentum 
 The common standard to define momentum is based on the relative returns among several stocks in a peer group, and a classification of winners and losers, given a certain threshold. Stocks outperforming are winners and stocks underperforming are losers. However, performance is a byproduct of two types of risks – systematic and unsystematic risk – and just because a given stock is performing better than the other, it may be because it’s a winner, but rather because it’s riding the on the right sector. Thus, ranking based on industry/sector may alleviate this issue. But again, this may not suffice, and an extension of this strategy could account the consideration of additional risk premiums (besides industry or sector) to better extract. By extracting the alfa of the stock, momentum can be enhanced, by better reflecting the outperformance of a stock – this is commonly referred to as Residual Momentum.
 
-#Note on factor premiums
+## Note on factor premiums
 Besides Momentum, there are other premium factors that can be employed to further enhance the trading strategy or filter out the investment universe. Premiums, in a nutshell are the exposure to a systematic factor and is up to the analyst to define the criteria used to characterize the factor. For example, the growth premium, is usually derived from the ranking of stock, based on their P/E ratio, or other combination of growth indicators. 
 In this sense, an extension of the model could consider the implementation of these additional premiums. One example, would be the labelling of stocks based on quality metrics, such as, growth of earnings/cash flow (CF), quality of earnings/CF, earnings/CF persistence and a ruling on the strategy that would limit long positions only to quality stocks, further minimizing the idiosyncratic risk. 
 
