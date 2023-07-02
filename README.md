@@ -8,6 +8,7 @@
 	Run TRADING_STRATEGY_v2.py to run the strategy. 
 Ensure you have installed the necessary dependencies. 
 You must populate the AssetIndex in the database, so it can import the price data.
+You must also populate the BenchmarkIndex accordingly to the corresponding benchmark they have, if you wish to perform the residual momentum analysis (as explained better below). All new Stocks should have the corresponding market benchmark and the respective industry benchmark.
 
 # Motivation
 
