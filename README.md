@@ -8,7 +8,8 @@
 	Run TRADING_STRATEGY_v2.py to run the strategy. 
 Ensure you have installed the necessary dependencies. 
 You must populate the AssetIndex in the database, so it can import the price data.
-You must also populate the BenchmarkIndex accordingly to the corresponding benchmark they have, if you wish to perform the residual momentum analysis (as explained better below). All new Stocks should have the corresponding market benchmark and the respective industry benchmark.
+You must also populate the BenchmarkIndex accordingly to the corresponding benchmark they have, if you wish to perform the residual momentum analysis (as explained better below). All new Stocks should have the corresponding market benchmark and the respective industry benchmark. 
+
 
 # Motivation
 For the last decade, financial markets traded within a monetary expansionary regime, up to the point where you actualy ended up paying for depositing/loaning money. This translated into larger volumes of money within the economy, a greater facility to credit and inevitably, higher stock prices. Even bad business models could finance their expansion at the cost of cash (as was the case with oil companies after the bust of the shale revolution and the recovery of the negative performance in begining of 2021 - the so called "cash burners"). Short trading in such market is extremely risky, making this strategies unappealing to hold (in fact, not only shorting, but active investing aswell since the benefit of selecting winners is also jeoperdize by the fact that we are all winners).
@@ -22,6 +23,10 @@ To partially cope with this issue, the strategy should be employed on a vast div
 
 ## Note on Momentum 
 The common standard to define momentum is based on the relative returns among several stocks in a peer group, and a classification of winners and losers, given a certain threshold. Stocks outperforming are winners and stocks underperforming are losers. However, performance is a byproduct of two types of risks – systematic and unsystematic risk – and just because a given stock is performing better than the other, it may be because it’s a winner, but rather because it’s riding the on the right sector. Thus, ranking based on industry/sector may alleviate this issue. But again, this may not suffice, and an extension of this strategy could account the consideration of additional risk premiums (besides industry or sector) to better extract. By extracting the alfa of the stock, momentum can be enhanced, by better reflecting the outperformance of a stock – this is commonly referred to as Residual Momentum.
+
+The code automatically runs the residual premium factors derived from the regression between the stock returns and theindustry and size betas. To activate it, just run the commented line in the below figure instead of the above. YOu can active it by switchin the functions on the TRADING_STRATEGY_v2.py in here:
+![image](https://github.com/LusoNX/LongShort-Cointegration-Pairwise-Strategy/assets/84282116/85e75f36-19b4-4c64-8f32-d30526059293)
+
 
 ## Note on factor premiums
 Besides Momentum, there are other premium factors that can be employed to further enhance the trading strategy or filter out the investment universe. Premiums, in a nutshell are the exposure to a systematic factor and is up to the analyst to define the criteria used to characterize the factor. For example, the growth premium, is usually derived from the ranking of stock, based on their P/E ratio, or other combination of growth indicators. 
@@ -66,11 +71,15 @@ The backtest results are merely demonstrative and are not curated for a better f
 ## Strategy Results
 (Note: All the inputs are derived on a rolling window basis, including standardization, to avoid look-ahead biases). 
 The accumulated performance of the strategies by industry and ALL industries.
-![image](https://github.com/LusoNX/LongShort-Cointegration-Pairwise-Strategy/assets/84282116/13e4ef2f-a269-4c8a-8a52-f6abb2dcadfe)
+[RET_PERFOMANCES_ACC.docx](https://github.com/LusoNX/LongShort-Cointegration-Pairwise-Strategy/files/11961056/RET_PERFOMANCES_ACC.docx)
+
 
 
 The rolling betas of the strategies by industry and ALL industries. 
-![image](https://github.com/LusoNX/LongShort-Cointegration-Pairwise-Strategy/assets/84282116/a68feb3e-37f0-471e-af91-ff45b5c472ec)
+[BETA_PERFORMANCES.docx](https://github.com/LusoNX/LongShort-Cointegration-Pairwise-Strategy/files/11961066/BETA_PERFORMANCES.docx)
+
+
+Again, the backtest results are not fully curated. However, the results do paint the generally idea behind the motivation of the project. The strategy captures majority of its performance in between 2020-2022, suggesting that indeed, markets are more fragmented and we are able to capture short term deviations by long and short positioning, more frequently. 
 
 
 
