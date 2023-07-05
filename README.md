@@ -6,6 +6,7 @@
 	Run price_data.py to extract the prices
 	Run label_assets.py to calculate the raw inputs for the strategy
 	Run TRADING_STRATEGY_v2.py to run the strategy. 
+ (Note: When running label_assets.py, the code will take some time, if you have a lot of assets. This is because you are performing rolling cointegration checks to verify the two series are cointegrated)
 Ensure you have installed the necessary dependencies. 
 You must populate the AssetIndex in the database, so it can import the price data.
 You must also populate the BenchmarkIndex accordingly to the corresponding benchmark they have, if you wish to perform the residual momentum analysis (as explained better below). All new Stocks should have the corresponding market benchmark and the respective industry benchmark. 
